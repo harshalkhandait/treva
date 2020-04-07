@@ -63,6 +63,7 @@ class _HomePageState extends State<HomePage> {
       return Center(child: CircularProgressIndicator());
     } else {
       return Scaffold(
+        backgroundColor: Color(0xFF736AB7),
         drawer: Drawer(),
         appBar: AppBar(
           centerTitle: true,
@@ -96,10 +97,6 @@ class _HomePageState extends State<HomePage> {
         this._appBarTitle = TextField(
           controller: _filter,
           onChanged: (value) {
-            if (value == null) {
-              searchValue = 'Iron Man 2';
-              getChatData(searchValue);
-            }
             searchValue = value;
             print(searchValue);
             getChatData(searchValue);
