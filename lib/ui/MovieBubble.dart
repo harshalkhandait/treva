@@ -105,7 +105,9 @@ class MovieBubble extends StatelessWidget {
                 Container(width: 24.0),
                 Icon(Icons.flight_land,
                     size: 14.0, color: constants.Colors.planetDistance),
-                Text(country, style: constants.TextStyles.planetDistance),
+                Flexible(
+                    child: Text(country,
+                        style: constants.TextStyles.planetDistance)),
               ],
             )
           ],
